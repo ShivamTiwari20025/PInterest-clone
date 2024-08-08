@@ -1,2 +1,23 @@
 </body>
+<script>
+    let search = document.querySelector(".search input");
+
+    search.addEventListener("click", (e) => {
+        console.log(e.target);
+
+        document.querySelector("#srch").style.display = "none"
+    })
+    document.addEventListener("click", (e) => {        
+        if (!search.contains(e.target)) {
+            document.querySelector("#srch").style.display = "block"
+        }
+    })
+    search.addEventListener("input", (e) => {
+      let form = document.querySelector(".for")
+     let text =  form.setAttribute('action',`/search/${search.value}`)
+     
+     
+    })
+</script>
+
 </html>

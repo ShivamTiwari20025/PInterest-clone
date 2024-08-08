@@ -3,6 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
+  <% if(nav == true){ %>
+    <div class="w-full px-10 py-5 flex justify-between bg-zinc-800  text-white">
+      <div class="logo flex items-center">
+        <img class="w-10 h-10" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="">
+        <h3 class="text-red-700 text-2xl mx-2 ">Pinterest</h3>
+      </div>
+      <form class="for"  method="get">
+      <div class="search flex items-center text-white relative">
+        <input class="w-[800px] h-10 rounded-full bg-zinc-700 outline-none px-9" type="search" placeholder="Search here"><i id="srch" class="absolute mx-3 ri-search-2-line"></i>
+      </div>
+    </form>
+      <div class="flex gap-10 items-center">
+      
+        <a href="/">Profile</a><a href="/feed">Feed</a><a class="px-3 py-2 bg-red-700 text-white rounded-lg" href="/logout">Logout</a>
+        
+      </div>
+    </div>
+ <% }%>
+  

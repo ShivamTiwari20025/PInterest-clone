@@ -1,0 +1,25 @@
+<% include ./partials/header.ejs %>
+    <div class="w-full min-h-screen bg-zinc-800 px-10 py-8 text-white">
+        <div class="cards flex flex-wrap gap-10">
+            <% post.forEach(function(e){ %>
+                <div class="card w-32">
+                    <div class="w-full h-40 bg-zinc-800 rounded-lg overflow-hidden">
+                        <img class="w-full h-full object-cover" src="/images/uploads/<%= e.Image %>" alt="" />
+                        < </div>
+                            <h5 class="mt-2 text-sm">
+                                <%= e.description %>
+                            </h5>
+                    </div>
+                    <% }) %>
+                </div>
+                
+          
+            <% if(post.length == 0){ %>
+                <h5 class="text-3xl">Sorry, No result found.</h5>
+                <% } %>
+        </div>
+       
+            <!-- <h5 class="text-white">Sorry , No result found.</h5> -->
+          
+    </div>
+    <% include ./partials/footer.ejs %>
